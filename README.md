@@ -96,6 +96,14 @@ Based on the graph, we can see that the Sales and Marketing Budget of TV has a c
 
 We duplicate dataset to do scaling using MinMaxScaler. Features in the data have different value ranges. By normalizing the data using MinMaxScaler, the data will have the same scale and the model can learn faster and the accuracy of the model can increase.
 
+## Hypertuning Parameter
+
+we used hypertuning parameter to get best model for parameter and hopefully that can impact score RSME, MAE, MAPE, and R2 at evaluate model. from the hypertuning parameter, we get :
+
+![image](https://user-images.githubusercontent.com/91566708/202835497-7b6ec834-ac1e-4039-bcad-4c6c8b030960.png)
+
+that is best model parameter for simple linear regression from hypertuning parameter.
+
 ## Preprocessing Modeling
 
 ![image](https://user-images.githubusercontent.com/91566708/202833030-a4f5decc-e647-4dd4-9160-fed7b06215c9.png)
@@ -108,6 +116,24 @@ From the graph, it is known that there is a positive relationship between the tr
 
 Based on the results of the evaluation that has been carried out, we can see that the MAE value is 2.44, the smaller the MAE value, the more accurate the model used. The MAPE value is 0.18 or 18%, this figure indicates the percentage error of the predictions made, the smaller the percentage error value in MAPE, the more accurate the forecasting results, for MAPE is 18% it is known that the predictions made are still classified as good for prediction. The RMSE value is 3.19, RMSE indicates that the variation in values produced by a forecast model is close to the variation in the observed value. RMSE measures how different the sets of values are. The smaller the RMSE value, the closer the predicted and detected values are. 
 The value of R2 is 0.67 or 67%, R square has a value between 0 – 1 provided that the closer to number one means the better, R2 has a value of 0.67, meaning that 67% of the distribution of the dependent variable can be explained by the independent variable. The remaining 33% cannot be explained by independent variables or can be explained by variables outside the independent variables (component errors).
+
+## Comparationn Evaluate Model
+
+![image](https://user-images.githubusercontent.com/91566708/202835613-9a746be0-11f0-4a5d-89b5-c37b5d15775b.png)
+
+we try to get result from evaluate model with 2 different process :
+1. `without`  Hypertuning Paramater,  do simmple linear regression with default parameter.
+2. `with` Hypertuning Parameter, do simple linear regression with best model parameter.
+
+but the conclusion that we get there is no difference so whether or not using hyperparameters is good. The model that was performed by hyperparameter tuning showed no difference in values for MAE, MAPE, and RSME, which means that the use of hyperparameters in this dataset does not have to be done.
+
+## Model Deployment
+
+the result from this model deployment is same like evaluate model that we made before, so this model  deployment with MLflow are succed.
+![image](https://user-images.githubusercontent.com/91566708/202835699-ceafb945-7240-43aa-be6a-d5fa745798ff.png)
+
+this  is the UI from ML flow that we already deploy the model to the platform
+![image](https://user-images.githubusercontent.com/91566708/202835711-978bed41-83bd-432e-8e86-a62647c4506e.png)
 
 ## Result
 
