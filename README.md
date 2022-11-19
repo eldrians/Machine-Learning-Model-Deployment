@@ -11,7 +11,8 @@
 * Deploy the model using MLflow deployment
 
 ### Challenges
-* There is no explanation for each column
+* There is no explanation for each column![a6027e34-e129-4f1c-a6e0-4c4af6614db0](https://user-images.githubusercontent.com/91566708/202836577-293ae765-d317-485b-9cd8-270046e3fdb3.jpg)
+
 
 ### Methodology/ Analytic Technique
 * Descriptive analysis
@@ -96,13 +97,13 @@ Based on the graph, we can see that the Sales and Marketing Budget of TV has a c
 
 We duplicate dataset to do scaling using MinMaxScaler. Features in the data have different value ranges. By normalizing the data using MinMaxScaler, the data will have the same scale and the model can learn faster and the accuracy of the model can increase.
 
-## Hypertuning Parameter
+## Hyperparameter Tuning
 
-we used hypertuning parameter to get best model for parameter and hopefully that can impact score RSME, MAE, MAPE, and R2 at evaluate model. from the hypertuning parameter, we get :
+we used Hyperparameter Tuning to get best model for parameter and hopefully that can impact score RSME, MAE, MAPE, and R2 at evaluate model. from the Hyperparameter Tuning, we get :
 
-![image](https://user-images.githubusercontent.com/91566708/202835497-7b6ec834-ac1e-4039-bcad-4c6c8b030960.png)
+![image](https://user-images.githubusercontent.com/91566708/202836595-02b34f00-8319-4e93-90e0-9e89f434acd6.png)
 
-that is best model parameter for simple linear regression from hypertuning parameter.
+that is best model parameter for simple linear regression from Hyperparameter Tuning.
 
 ## Preprocessing Modeling
 
@@ -122,8 +123,8 @@ The value of R2 is 0.67 or 67%, R square has a value between 0 – 1 provided th
 ![image](https://user-images.githubusercontent.com/91566708/202835613-9a746be0-11f0-4a5d-89b5-c37b5d15775b.png)
 
 we try to get result from evaluate model with 2 different process :
-1. `without`  Hypertuning Paramater,  do simmple linear regression with default parameter.
-2. `with` Hypertuning Parameter, do simple linear regression with best model parameter.
+1. `without`  Hyperparameter Tuning,  do simmple linear regression with default parameter.
+2. `with` Hyperparameter Tuning, do simple linear regression with best model parameter.
 
 but the conclusion that we get there is no difference so whether or not using hyperparameters is good. The model that was performed by hyperparameter tuning showed no difference in values for MAE, MAPE, and RSME, which means that the use of hyperparameters in this dataset does not have to be done.
 
