@@ -11,7 +11,7 @@
 * Deploy the model using MLflow deployment
 
 ### Challenges
-* There is no explanation for each column![a6027e34-e129-4f1c-a6e0-4c4af6614db0](https://user-images.githubusercontent.com/91566708/202836577-293ae765-d317-485b-9cd8-270046e3fdb3.jpg)
+* There is no explanation for each column
 
 
 ### Methodology/ Analytic Technique
